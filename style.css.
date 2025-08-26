@@ -1,0 +1,89 @@
+/* style.css */
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  background: #1c1f26;
+  color: #f0f0f0;
+}
+
+.app_header {
+  background: linear-gradient(90deg, #5b2be0, #9b5de5);
+  padding: 20px;
+  text-align: center;
+  color: white;
+}
+
+.brand_logo {
+  font-size: 2rem;
+  margin-right: 8px;
+}
+
+.brand_title {
+  margin: 0;
+  font-size: 1.8rem;
+}
+
+.brand_subtitle {
+  margin: 0;
+  font-size: 1rem;
+  opacity: 0.8;
+}
+
+.chat {
+  display: flex;
+  flex-direction: column;
+  height: calc(100vh - 140px);
+  padding: 20px;
+}
+
+.chat_messages {
+  flex: 1;
+  overflow-y: auto;
+  margin-bottom: 10px;
+  padding-right: 10px;
+}
+
+.message {
+  margin: 10px 0;
+  padding: 12px 16px;
+  border-radius: 12px;
+  max-width: 70%;
+}
+
+.message.user {
+  background: #5b2be0;
+  margin-left: auto;
+  text-align: right;
+}
+
+.message.bot {
+  background: #2a2d34;
+  margin-right: auto;
+}
+
+#composer {
+  display: flex;
+  border-top: 1px solid #444;
+  padding: 10px;
+}
+
+#user-input {
+  flex: 1;
+  padding: 10px;
+  border: none;
+  border-radius: 8px;
+  margin-right: 10px;
+}
+
+button {
+  background: #5b2be0;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 8px;
+  color: white;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #4722b0;
+}
