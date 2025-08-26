@@ -1,0 +1,43 @@
+// script.js
+
+// Находим элементы
+const form = document.getElementById("composer");
+const input = document.getElementById("user-input");
+const messagesDiv = document.getElementById("messages");
+
+// Добавляем сообщение в чат
+function addMessage(text, sender = "bot") {
+  const msg = document.createElement("div");
+  msg.classList.add("message", sender);
+  msg.innerText = text;
+  messagesDiv.appendChild(msg);
+  messagesDiv.scrollTop = messagesDiv.scrollHeight;
+}
+
+// Имитация ответа бота (позже подключим ИИ)
+function botReply(userText) {
+  let reply = "Я пока просто учусь отвечать ✨";
+  
+  if (userText.toLowerCase().includes("привет")) {
+    reply = "Привет 🌙! Я — твой мистический советник.";
+  } else if (userText.toLowerCase().includes("карта")) {
+    reply = "Хочешь расклад Таро? 🔮";
+  } else if (userText.toLowerCase().includes("нумерология")) {
+    reply = "Дай свою дату рождения, и я скажу число твоего пути 🔢";
+  } else if (userText.toLowerCase().includes("астро")) {
+    reply = "Напомни дату и время рождения — посмотрим твой знак 🌌";
+  }
+
+  setTimeout(() => addMessage(reply, "bot"), 600);
+}
+
+// Отправка сообщения
+form.addEventListener("submit", function (e) {
+  e.preventDefault();
+  const text = input.value.trim();
+  if (!text) return;
+
+  addMessage(text, "user");
+  input.value = "";
+  botReply(text);
+});
