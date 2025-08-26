@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Luna Advisor — мистический чат-помощник</title>
+
+  <!-- шрифт + стили подключим (файл style.css добавим следующим шагом) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="app">
+    <header class="app__header">
+      <div class="brand">
+        <span class="brand__logo">🌙</span>
+        <div>
+          <h1 class="brand__title">Luna Advisor</h1>
+          <p class="brand__subtitle">Астрология · Нумерология · Таро · Психология</p>
+        </div>
+      </div>
+    </header>
+
+    <section id="chat" class="chat">
+      <div id="messages" class="chat__messages" aria-live="polite" aria-busy="false">
+        <!-- Сообщения будут появляться здесь (скрипт добавим далее) -->
+      </div>
+
+      <form id="composer" class="composer" autocomplete="off">
+        <input
+          id="user-input"
+          class="composer__input"
+          type="text"
+          name="message"
+          placeholder="Напиши вопрос… (например: «Сделай расклад на отношения»)"
+          required
+        />
+        <button class="composer__send" type="submit" title="Отправить">
+          ➤
+        </button>
+      </form>
+
+      <!-- Быстрые подсказки -->
+      <div class="quick">
+        <button class="quick__btn" data-prompt="Сделай расклад Таро на отношения">❤️ Отношения</button>
+        <button class="quick__btn" data-prompt="Да/нет: стоит ли принимать это предложение?">🃏 Да/Нет</button>
+        <button class="quick__btn" data-prompt="Проанализируй мою дату рождения по нумерологии">🔢 Нумерология</button>
+        <button class="quick__btn" data-prompt="Дай астрологический обзор по моей дате">🌌 Астрология</button>
+      </div>
+    </section>
+
+    <footer class="app__footer">
+      <small>© Luna Advisor — для помощи и вдохновения. Не заменяет мед. или юр. консультации.</small>
+    </footer>
+  </main>
+
+  <!-- логика чата подключим позже (файл script.js) -->
+  <script src="script.js" defer></script>
+</body>
+</html>
+
